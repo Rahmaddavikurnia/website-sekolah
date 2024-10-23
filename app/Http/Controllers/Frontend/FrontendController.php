@@ -200,11 +200,11 @@ class FrontendController extends Controller
             $result = $results->first();
 
             if ($result instanceof Artikel) {
-                return redirect()->route('detail-artikel', $result->id);
+                return redirect()->route('detail-artikel', $result->slug);
             } elseif ($result instanceof Kabar) {
-                return redirect()->route('detail-kabar', $result->id);
+                return redirect()->route('detail-kabar', $result->slug);
             } elseif ($result instanceof Prestasi) {
-                return redirect()->route('detail-prestasi', $result->id);
+                return redirect()->route('detail-prestasi', $result->slug);
             }
         }
 

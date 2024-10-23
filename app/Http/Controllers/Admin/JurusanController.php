@@ -14,7 +14,7 @@ class JurusanController extends Controller
      */
     public function index()
     {
-        $jurusans = Jurusan::orderByRaw('id = 1 DESC')->latest()->paginate(10);
+        $jurusans = Jurusan::orderBy('id', 'ASC')->paginate(10);
         return view('admin.jurusan-admin.dashboard',compact('jurusans'));
     }
 

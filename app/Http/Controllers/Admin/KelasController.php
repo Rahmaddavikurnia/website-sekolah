@@ -14,7 +14,7 @@ class KelasController extends Controller
      */
     public function index()
     {
-        $kelass = Kelas::with('jurusan')->orderByRaw('id = 1 DESC')->latest()->paginate(10);
+        $kelass = Kelas::with('jurusan')->orderBy('id', 'ASC')->paginate(10);
         return view('admin.kelas.dashboard',compact('kelass'));
     }
 

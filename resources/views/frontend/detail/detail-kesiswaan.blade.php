@@ -9,7 +9,7 @@
  	
     @include('frontend.master.navbar')
 	<!--Page Title-->
-    <section class="page-title" style="background-image:url({{asset('storage/images/kesiswaan/'.$kesiswaanss->foto_program)}})">
+    <section class="page-title" style="background-image:url('{{asset('storage/images/kesiswaan/'.$kesiswaanss->foto_program)}}')">
     	<div class="auto-container">
         	<h1>{{$kesiswaanss->nama_program}}</h1>
             <ul class="page-breadcrumb">

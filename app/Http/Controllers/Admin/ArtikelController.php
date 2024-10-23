@@ -16,7 +16,7 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        $artikels = Artikel::with('user')->orderByRaw('id = 1 DESC')->latest()->paginate(10);
+        $artikels = Artikel::with('user')->orderBy('id', 'ASC')->paginate(10);
         return view('admin.artikel.dashboard',compact('artikels'));
     }
 

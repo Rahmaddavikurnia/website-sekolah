@@ -10,7 +10,7 @@
     @include('frontend.master.navbar')
 	
 	<!--Page Title-->
-    <section class="page-title" style="background-image:url({{asset('storage/images/artikel/'.$artikels->thumbnail)}})">
+    <section class="page-title" style="background-image:url('{{asset('storage/images/artikel/'.$artikels->thumbnail)}}')">
     	<div class="auto-container">
         	<h1>{{$artikels->judul_artikel}}</h1>
             <ul class="page-breadcrumb">
@@ -52,7 +52,7 @@
                                 @else
                                     @foreach ($relatedArtikels as $item)
                                     <article class="post">
-                                        <figure class="post-thumb"><a href="{{route('detail-artikel',$item->slug )}}"><img src="{{asset('storage/images/artikel/'.$item->tumbnail)}}" alt=""></a></figure>
+                                        <figure class="post-thumb"><a href="{{route('detail-artikel',$item->slug )}}"><img src="{{asset('storage/images/artikel/'.$item->thumbnail)}}" alt=""></a></figure>
                                         <div class="post-info">{{$item->tanggal_terbit}}</div>
                                         <div class="text"><a href="{{route('detail-kabar',$item->slug)}}">{{$item->judul_artikel}}</a></div>
                                     </article>

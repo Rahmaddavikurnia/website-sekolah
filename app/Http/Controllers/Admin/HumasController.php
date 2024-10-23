@@ -14,7 +14,7 @@ class HumasController extends Controller
      */
     public function index()
     {
-        $humass = Humas::orderByRaw('id = 1 DESC')->latest()->paginate(10);
+        $humass = Humas::orderBy('id', 'ASC')->paginate(10);
         return view('admin.humas.dashboard',compact('humass'));
     }
 

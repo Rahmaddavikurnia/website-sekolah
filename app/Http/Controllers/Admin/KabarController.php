@@ -18,7 +18,7 @@ class KabarController extends Controller
      */
     public function index()
     {
-        $kabars = Kabar::orderByRaw('id = 1 DESC')->latest()->paginate(10);
+        $kabars = Kabar::orderBy('id', 'ASC')->paginate(10);
         return view('admin.kabar.dashboard',compact('kabars'));
     }
 

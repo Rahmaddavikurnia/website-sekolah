@@ -149,7 +149,7 @@
 										<li>{{$item->kategori_type}}</li>
 									</ul>
 									<h3><a href="{{route('detail-artikel',$item->slug)}}">{{$item->judul_artikel}}</a></h3>
-									<div class="text">{{ Str::limit($item->isi_artikel, 150, '...') }}</div>
+									<div class="text">{{ Str::limit($item->isi_artikel, 300, '...') }}</div>
 									<a class="read-more" href="{{route('detail-artikel',$item->slug)}}"><span class="arrow fa fa-angle-right"></span>Lihat selengkapnya</a>
 								</div>
 							</div>
@@ -186,6 +186,7 @@
 							<div class="overlay-box">
 								<div class="overlay-inner">
 									<div class="content">
+										{{-- <div class="text">{{ $item->deskripsi }}</div> --}}
 										<div class="text">{{ Str::limit($item->deskripsi, 250, '...') }}</div>
 										<a href="{{route('detail-prestasi',$item->slug)}}" class="read-more"><span class="fa fa-angle-right"></span>Lihat selengkapnya</a>
 									</div>

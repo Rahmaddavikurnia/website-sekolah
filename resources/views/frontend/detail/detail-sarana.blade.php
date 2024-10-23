@@ -9,7 +9,7 @@
  	
     @include('frontend.master.navbar')
 	
-    <section class="page-title" style="background-image:url({{asset('storage/images/sarana/'.$saranas->gambar)}})">
+    <section class="page-title" style="background-image:url('{{asset('storage/images/sarana/'.$saranas->gambar)}}')">
     	<div class="auto-container">
         	<h1>{{$saranas->nama}}</h1>
             <ul class="page-breadcrumb">

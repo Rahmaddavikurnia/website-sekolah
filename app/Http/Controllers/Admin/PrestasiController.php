@@ -15,7 +15,7 @@ class PrestasiController extends Controller
      */
     public function index()
     {
-        $prestasis = Prestasi::with('siswa')->orderByRaw('id = 1 DESC')->latest()->paginate(10);
+        $prestasis = Prestasi::with('siswa')->orderBy('id', 'ASC')->paginate(10);
         return view('admin.prestasi.dashboard',compact('prestasis'));
     }
 
@@ -104,7 +104,7 @@ class PrestasiController extends Controller
             $name=$file->getClientOriginalName();
             $path= 'storage/images/prestasi/';
             $file->move($path,$name);
-            $kabars['gambar'] = $name;
+            $update['gambar'] = $name;
         }
 
         $update -> title = $request -> title;

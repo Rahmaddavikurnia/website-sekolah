@@ -15,7 +15,7 @@ class KurikulumController extends Controller
      */
     public function index()
     {
-        $kurikulums = Kurikulum::with('jurusan')->orderByRaw('id = 1 DESC')->latest()->paginate(10);
+        $kurikulums = Kurikulum::with('jurusan')->orderBy('id', 'ASC')->paginate(10);
         return view('admin.kurikulum.dashboard',compact('kurikulums'));
     }
 

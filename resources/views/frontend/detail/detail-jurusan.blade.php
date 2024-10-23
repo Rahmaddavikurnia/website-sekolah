@@ -8,7 +8,7 @@
     @include('frontend.master.navbar')
 	
 	<!--Page Title-->
-    <section class="page-title" style="background-image:url({{asset('storage/jurusan/' .$jurusanss->foto)}})">
+    <section class="page-title" style="background-image:url('{{asset('storage/jurusan/' .$jurusanss->foto)}}')">
     	<div class="auto-container">
         	<h1>{{$jurusanss->nama}}</h1>
             <ul class="page-breadcrumb">

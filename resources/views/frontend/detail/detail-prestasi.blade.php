@@ -4,13 +4,11 @@
 
 <div class="page-wrapper">
  	
-    <!-- Preloader -->
     <div class="preloader"></div>
  	
     @include('frontend.master.navbar')
 	
-	<!--Page Title-->
-    <section class="page-title" style="background-image:url({{asset('storage/images/prestasi/'.$prestasis->gambar)}})">
+    <section class="page-title" style="background-image:url('{{asset('storage/images/prestasi/'.$prestasis->gambar)}}')">
     	<div class="auto-container">
         	<h1>{{$prestasis->title}}</h1>
             <ul class="page-breadcrumb">
@@ -19,14 +17,11 @@
             </ul>
         </div>
     </section>
-    <!--End Page Title-->
-	
-	<!--Sidebar Page Container-->
+   
     <div class="sidebar-page-container">
     	<div class="auto-container">
         	<div class="row clearfix">
 				
-               	<!--Sidebar Side-->
                 <div class="sidebar-side col-lg-4 col-md-12 col-sm-12">
                 	<aside class="sidebar">
 						<div class="sidebar-inner">
@@ -42,7 +37,6 @@
 							</div>
 						
 
-							<!--Popular Posts-->
 							<div class="sidebar-widget popular-posts">
 								<div class="sidebar-title">
 									<h2>Prestasi Terkait</h2>
@@ -87,8 +81,9 @@
 								<h2>{{$prestasis->title}}</h2>
 								<div class="text">
                                     @php
-                                        // Membagi deskripsi menjadi paragraf berdasarkan batas karakter
-                                        $paragraphs = explode("\n", wordwrap($prestasis->deskripsi, 185, "\n")); // 100 karakter per paragraf
+                                       
+                                        // $paragraphs = explode("\n", wordwrap($prestasis->deskripsi, 185, "\n")); 
+										$paragraphs = explode("\n", $prestasis->deskripsi); 
                                     @endphp
 
                                     @foreach ($paragraphs as $paragraph)

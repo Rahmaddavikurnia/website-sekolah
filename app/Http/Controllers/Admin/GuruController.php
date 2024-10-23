@@ -14,7 +14,7 @@ class GuruController extends Controller
      */
     public function index()
     {
-        $gurus = Guru::with('jurusans')->orderByRaw('id = 1 DESC')->latest()->paginate(10);
+        $gurus = Guru::with('jurusans')->orderBy('id', 'ASC')->paginate(10);
         $jurusans = Jurusan::all();
         return view('admin.guru.dashboard', compact('gurus', 'jurusans'));
     }

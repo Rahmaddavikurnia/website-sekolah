@@ -16,7 +16,7 @@ class SiswaController extends Controller
      */
     public function index()
     {
-        $siswas = Siswa::with('jurusan','kelas')->orderByRaw('id = 1 DESC')->latest()->paginate(10);
+        $siswas = Siswa::with('jurusan','kelas')->orderBy('id', 'ASC')->paginate(10);
         return view('admin.siswa.dashboard',compact('siswas'));
     }
 

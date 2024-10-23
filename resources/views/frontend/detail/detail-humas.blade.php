@@ -10,7 +10,7 @@
     @include('frontend.master.navbar')
 	
 	<!--Page Title-->
-    <section class="page-title" style="background-image:url({{asset('storage/images/humas/'.$humass->gambar)}})">
+    <section class="page-title" style="background-image:url('{{asset('storage/images/humas/'.$humass->gambar)}}')">
     	<div class="auto-container">
         	<h1>{{$humass->judul_kegiatan}}</h1>
             <ul class="page-breadcrumb">
@@ -88,8 +88,8 @@
 								<h2>{{$humass->judul_kegiatan}}</h2>
 								<div class="text">
                                     @php
-                                        // Membagi deskripsi menjadi paragraf berdasarkan batas karakter
-                                        $paragraphs = explode("\n", wordwrap($humass->deskripsi_kegiatan, 185, "\n")); // 100 karakter per paragraf
+                                        // $paragraphs = explode("\n", wordwrap($humass->deskripsi_kegiatan, 185, "\n"));
+										$paragraphs = explode("\n", $humass->deskripsi_kegiatan);
                                     @endphp
 
                                     @foreach ($paragraphs as $paragraph)

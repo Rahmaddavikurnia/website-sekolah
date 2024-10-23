@@ -14,7 +14,7 @@ class PeluangkarirController extends Controller
      */
     public function index()
     {
-        $peluangkarirs = Peluangkarir::with('jurusan')->orderByRaw('id = 1 DESC')->latest()->paginate(10);
+        $peluangkarirs = Peluangkarir::with('jurusan')->orderBy('id', 'ASC')->paginate(10);
         return view('admin.karir.dashboard',compact('peluangkarirs'));
     }
 

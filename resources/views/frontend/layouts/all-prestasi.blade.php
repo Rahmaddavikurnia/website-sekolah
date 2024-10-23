@@ -25,7 +25,6 @@
     	<div class="auto-container">
        	
             @foreach ($prestasis as $item)
-                        	<!--News Block-->
         	<div class="news-block-eight">
         		<div class="inner-box">
         			<div class="image">
@@ -47,7 +46,7 @@
 							</div>
 						</div>
 						<h2><a href="{{route('detail-prestasi',$item->slug)}}">{{$item->title}}</a></h2>
-						<div class="text">{{ Str::limit($item->isi_artikel, 300, '...') }}</div>
+						<div class="text">{{ Str::limit($item->deskripsi, 300, '...') }}</div>
 						<a class="read-more" href="{{route('detail-prestasi',$item->slug)}}">Lihat Selengkapnya</a>
 					</div>
 				</div>
