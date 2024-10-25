@@ -9455,14 +9455,16 @@ img{
 
 .portfolio-single-section .image-column .inner-column .image{
 	position: relative;
-	height: 400px;
+	overflow: hidden;
 	margin-bottom: 30px;
 }
 
 .portfolio-single-section .image-column .inner-column .image img{
 	position: relative;
 	width:100%;
-	height: 100%;
+	/* height: 100%; */
+	height: 400px;
+	object-fit: cover; 
 	display: block;
 }
 

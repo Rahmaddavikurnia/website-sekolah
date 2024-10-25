@@ -45,7 +45,8 @@
                             <p class="mb-3">
                                 @php
                                     // Membagi deskripsi menjadi paragraf berdasarkan batas karakter
-                                    $paragraphs = explode("\n", wordwrap($kesiswaanss->deskripsi_program, 300, "\n"));
+                                    // $paragraphs = explode("\n", wordwrap($kesiswaanss->deskripsi_program, 300, "\n"));
+									$paragraphs = explode("\n", $kesiswaanss->deskripsi_program);
                                 @endphp
 
                                 @foreach ($paragraphs as $paragraph)

@@ -47,7 +47,7 @@
 							</div>
 						</div>
 						<h2><a href="blog-single.html">{{$item->judul_kabar}}</a></h2>
-						<div class="text">{{ Str::limit($item->isi_kabar, 300, '...') }}</div>
+						<div class="text">{{ Str::limit($item->isi_kabar, 280, '...') }}</div>
 						<a class="read-more" href="{{route('detail-kabar',$item->slug)}}">Lihat Selengkapnya</a>
 					</div>
 				</div>
